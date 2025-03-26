@@ -1,13 +1,12 @@
-import React from 'react';
-import Input from '../components/Input';  
+import Input from "../components/Input/Input";
 
-const Homework06 = () => {
+function Homework06() {
   return (
     <div>
       <h2>Welcome to my world!</h2>
-      <Input />  {}
+      <Input />
     </div>
   );
-};
+}
 
 export default Homework06;
