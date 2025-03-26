@@ -1,7 +1,9 @@
 
 //пример импорта по умолчанию (нужно использовать точное название и заключать его 
 //в фигурные скобки)
-import Button from "../../components/Button/Button";
+
+import Button from "../../components/Button/button.tsx";
+
 import { getAction, TRAFFIC_LIGHT } from "./object_types";
 
 function Lesson06() {
