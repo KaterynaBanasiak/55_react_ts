@@ -1,5 +1,5 @@
 import "./Product.css";
-import { ProductProps } from "./types"; // Импорт интерфейса из отдельного файла
+import { ProductProps } from "./types"; 
 
 function Product({ name, price }: ProductProps) {
   let backgroundColor;
