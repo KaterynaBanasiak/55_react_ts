@@ -1,26 +1,21 @@
-import './Product.css'; 
+import "./Product.css";
+import { ProductProps } from "./types"; // Импорт интерфейса из отдельного файла
 
-interface ProductProps {
-  name: string;
-  price: number;
-}
-
-const Product: React.FC<ProductProps> = ({ name, price }) => {
+function Product({ name, price }: ProductProps) {
   let backgroundColor;
 
-  
   switch (name) {
-    case 'Apple':
-      backgroundColor = 'green';
+    case "Apple":
+      backgroundColor = "green";
       break;
-    case 'Banana':
-      backgroundColor = 'yellow'; 
+    case "Banana":
+      backgroundColor = "yellow";
       break;
-    case 'Orange':
-      backgroundColor = 'orange'; 
+    case "Orange":
+      backgroundColor = "orange";
       break;
     default:
-      backgroundColor = 'gray'; 
+      backgroundColor = "gray";
   }
 
   return (
