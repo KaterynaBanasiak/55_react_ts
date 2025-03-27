@@ -5,7 +5,7 @@ import EmployeeCard from '../../components/EmployeeCard/EmployeeCard';
 // все картинки в проекте уже экспортированы по умолчанию, чтобы добавить картинку
 // в компонент нужно её просто импортировать(по умолчанию) и придумать псевдоним
 import AvatarImg from '../../assets/avatar.jpg';
-import Button from '../../components/Button/Button';
+import Button from '../../components/Button/button';
 import Input from '../../components/Input/Input';
 
 function Lesson08() {

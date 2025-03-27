@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import Product from "../components/Product/Product";
+import Product from "../../components/Product/Product";
 
 const products = [
   { name: "Apple", price: 1.5 },
