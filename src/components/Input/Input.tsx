@@ -31,3 +31,4 @@ function Input({ placeholder, name, value, type = "text", onChange, label, id }:
 export default Input;
 
 
+
