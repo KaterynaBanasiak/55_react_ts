@@ -1,25 +1,13 @@
-import './styles.css';
-import { ButtonProps } from './types.ts';
+/** @jsxImportSource @emotion/react */
+import { ButtonStyled } from "./styles.ts";
+import { ButtonProps } from "./types";
 
-// interface ButtonProps {
-//   name: string,
-//   //void - если функция ничего не возвращает
-//   onClick?: () => void,
-//   disabled?: boolean,
-//   type?: 'submit' | 'button' | 'reset'
-// }
-
-function Button({ name, onClick, disabled = false, type = 'submit' }: ButtonProps) {
+const Button: React.FC<ButtonProps> = ({ children, danger = false, onClick, type = "button", disabled }) => {
   return (
-    <button
-      className="main-button"
-      onClick={onClick}
-      disabled={disabled}
-      type={type}
-    >
-      {name}
-    </button>
-  )
-}
+    <ButtonStyled danger={danger} onClick={onClick} type={type} disabled={disabled}>
+      {children}
+    </ButtonStyled>
+  );
+};
 
-export default Button
+export default Button;

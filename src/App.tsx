@@ -9,7 +9,8 @@ import GlobalStyles from "./styles/GlobalStyles.tsx"
 // import Lesson08 from "./lessons/Lesson08/Lesson08"
 // import Lesson06 from "./lessons/Lesson06/Lesson06"
 // import Lesson09 from "./lessons/Lesson09/Lesson09"
-import Lesson10 from "./lessons/Lesson10/lesson10.tsx"
+import Homework10 from "./homeworks/Homework10/Homework10";
+
 
 
 //Homeworks imports
@@ -36,7 +37,8 @@ function App() {
       {/* <Homework08 /> */}
       {/* <Lesson09 /> */}
       {/* <Homework09 /> */}
-      <Lesson10 />
+      {/* <Lesson10 /> */}
+      <Homework10 />
     </>
   )
 }
