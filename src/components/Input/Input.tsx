@@ -1,34 +1,29 @@
-import { ChangeEvent } from "react";
-import styles from "./Input.module.css";
+import './styles.css';
+import { InputProps } from './types';
 
-export interface InputProps {
-  placeholder?: string;
-  name: string;
-  value?: string;
-  type?: "text" | "email" | "number" | "password" | "tel";
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
-  label?: string;
-  id?: string;
-}
-
-function Input({ placeholder, name, value, type = "text", onChange, label, id }: InputProps) {
+function Input({
+  placeholder,
+  name,
+  value,
+  type = 'text',
+  onChange,
+  label,
+  id
+}: InputProps) {
   return (
-    <div className={styles.inputContainer}>
-      {label && <label htmlFor={id}>{label}</label>}
+    <div className='input-container'>
+      <label htmlFor={id}>{label}</label>
       <input
-        id={id}
+        className='input-component'
         name={name}
-        type={type}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
-        className={styles.input}
+        type={type}
+        id={id}
       />
     </div>
-  );
+  )
 }
 
 export default Input;
-
-
-
