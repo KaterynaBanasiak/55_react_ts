@@ -15,8 +15,8 @@ export const Card = styled.div<{ vip?: boolean }>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 320px;
-  height: 320px;
+  width: ${({ vip }) => (vip ? '370px' : '320px')};
+  height: ${({ vip }) => (vip ? '370px' : '320px')};
   background-color: ${({ vip }) => (vip ? '#FFD700' : '#D3D3D3')};
   border-radius: 10px;
   padding: 20px;
