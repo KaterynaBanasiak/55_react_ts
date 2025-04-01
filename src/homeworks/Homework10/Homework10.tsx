@@ -1,14 +1,15 @@
 import Button from "../../components/Button/button";
-import { Homework10Container } from "./styles.ts";
+import { Homework10Container } from "./styles";
 
-function Homework10() {
+function Homework10 (){
   return (
-    <Homework10Container>
-      <Button>SEND</Button>
-      <Button danger>DELETE</Button>
-    </Homework10Container>
-  );
+  <Homework10Container>
+    <Button name='SEND'/>
+    <Button name='DELETE' danger/>
+  </Homework10Container>
+)
 }
 
-export default Homework10;
+export default Homework10
+
 

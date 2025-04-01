@@ -1,7 +1,8 @@
 export interface ButtonProps {
-  children: React.ReactNode;
-  danger?: boolean;
-  onClick?: () => void;
-  type?: "submit" | "button" | "reset";
-  disabled?: boolean;
+  name: string,
+  //void - если функция ничего не возвращает
+  onClick?: () => void,
+  disabled?: boolean,
+  type?: 'submit' | 'button' | 'reset',
+  danger?: boolean
 }
