@@ -14,10 +14,10 @@ export const ButtonStyled = styled.button<ButtonStyledProps>`
   cursor: pointer;
   transition: background-color 0.3s ease;
   
-  background-color: ${({ danger }) => (danger ? "green" : "orange")};
+  background-color: ${({ danger }) => (danger ? "red" : "blue")};
 
   &:hover {
-    background-color: ${({ danger }) => (danger ? "#006400" : "#ff8c00")};
+    background-color: ${({ danger }) => (danger ? "#f93838d2" : "#5c5eea")};
   }
 
   &:disabled {
