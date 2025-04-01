@@ -1,15 +1,16 @@
+// Homework11.tsx
 import Button from "../../components/Button/button";
-import { Homework10Container } from "./styles";
 
-function Homework10 (){
+function Homework11() {
   return (
-  <Homework10Container>
-    <Button name='SEND'/>
-    <Button name='DELETE' danger/>
-  </Homework10Container>
-)
+    <div>
+      <Button name="Delete" danger={true}>Delete</Button>
+      <Button name="Save" danger={false}>Save</Button>
+    </div>
+  );
 }
 
-export default Homework10
+export default Homework11;
+
 
 
