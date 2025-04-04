@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import backImage from '../../assets/Image20250403101214.jpg';
 
 export const Homework12Container = styled.div`
   display: flex;
@@ -7,6 +8,9 @@ export const Homework12Container = styled.div`
   gap: 20px;
   padding: 40px;
   background-color: #f0f0f0;
+  background-image: url(${backImage});
+  background-position: center;
+  background-size: cover;
 `;
 
 export const FactWrapper = styled.div`
