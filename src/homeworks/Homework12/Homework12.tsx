@@ -30,9 +30,9 @@ function Homework12() {
 
   return (
     <Homework12Container>
-      <Button onClick={getFact} disabled={isLoading}>
+      <button onClick={getFact} disabled={isLoading}>
         GET MORE FACTS
-      </Button>
+      </button>
       <FactWrapper>{isLoading ? <Spinner /> : fact}</FactWrapper>
       {error && <Error>{error}</Error>}
     </Homework12Container>
