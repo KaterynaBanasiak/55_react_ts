@@ -1,25 +1,32 @@
-// Input.tsx
-import React from "react";
-import { InputHTMLAttributes } from "react";
-import styled from "@emotion/styled";
+import { InputContainer, Label, InputComponent, ErrorMessage } from './styles';
+import { InputProps } from './types';
 
-// Обновим интерфейс InputProps, добавив нужные пропы
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  search?: boolean;
+function Input({
+  placeholder,
+  name,
+  value,
+  type = 'text',
+  onChange,
+  label,
+  id,
+  search,
+  error
+}: InputProps) {
+  return (
+    <InputContainer>
+      <Label htmlFor={id}>{label}</Label>
+      <InputComponent
+        name={name}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        type={type}
+        id={id}
+        isSearch = {search}
+      />
+      <ErrorMessage>{error}</ErrorMessage>
+    </InputContainer>
+  )
 }
-
-const StyledInput = styled.input<InputProps>`
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  width: 100%;
-  max-width: 300px;
-  background-color: ${(props) => (props.search ? "#f0f0f0" : "white")};
-`;
-
-const Input: React.FC<InputProps> = ({ search, ...rest }) => {
-  return <StyledInput {...rest} search={search} />;
-};
 
 export default Input;
