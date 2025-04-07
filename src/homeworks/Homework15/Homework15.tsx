@@ -3,8 +3,8 @@ import * as Yup from "yup";
 
 import Input from "../../components/Input/Input";
 import Checkbox from "../../components/Checkbox/Checkbox";
-import { Homework15Wrapper, ErrorMessage } from "./styles";
-import Button from "../../components/Button/button"; // импорт кнопки
+import { Homework15Wrapper } from "./styles";
+import Button from "../../components/Button/button";
 
 interface FormValues {
   code: string;
@@ -27,8 +27,8 @@ function Homework15() {
     },
     validationSchema,
     validateOnChange: false,
-    onSubmit: (values) => {
-      console.log("Вы успешно вошли"); // Сообщение при отправке формы
+    onSubmit: () => {
+      console.log("Вы успешно вошли");
     }
   });
 
@@ -51,15 +51,12 @@ function Homework15() {
         label="Privacy and policy"
         checked={formik.values.agreement}
         onChange={formik.handleChange}
+        error={formik.errors.agreement}
       />
-      <ErrorMessage>{formik.errors.agreement}</ErrorMessage>
 
-      {/* Используем Button с type="submit" */}
       <Button type="submit">Login</Button>
     </Homework15Wrapper>
   );
 }
 
 export default Homework15;
-
-
