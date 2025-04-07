@@ -1,13 +1,22 @@
 import styled from "@emotion/styled";
 
 export const Lesson13Container = styled.div`
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100vw;  
+  width: 100vw;
   height: 100vh;
   background-color: #6c8ac7;
+`;
+
+export const StyledInput = styled.input`
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  width: 300px;
 `;
 
 export const ImagesContainer = styled.div`

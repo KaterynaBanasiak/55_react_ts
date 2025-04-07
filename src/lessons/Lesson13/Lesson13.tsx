@@ -6,6 +6,7 @@ import {
   ImagesContainer,
   ImageWrapper,
   ErrorMessage,
+  StyledInput,
 } from "./styles";
 
 const API_URL = "https://dog.ceo/api/breeds/image/random";
@@ -14,8 +15,8 @@ function Lesson13() {
   const [images, setImages] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [inputValue, setInputValue] = useState<string>("");
 
-  // Функция для запроса изображения
   const fetchImage = async () => {
     setError(null);
     setIsLoading(true);
@@ -29,18 +30,29 @@ function Lesson13() {
     }
   };
 
-  // Очистка всех изображений
   const deleteAllImages = () => {
     setImages([]);
   };
 
-  // Запрос при загрузке страницы
   useEffect(() => {
     fetchImage();
   }, []);
 
+  // каждый раз при вводе текста делаем запрос
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+    fetchImage();
+  };
+
   return (
     <Lesson13Container>
+      <StyledInput
+        type="text"
+        placeholder="Type something..."
+        value={inputValue}
+        onChange={handleInputChange}
+      />
+
       <Button onClick={fetchImage} disabled={isLoading}>
         GET MORE IMAGES
       </Button>
