@@ -1,43 +1,25 @@
-// Button.tsx
-import { FC } from "react";
-import styled from "@emotion/styled";
-import { ButtonHTMLAttributes } from "react";
+import { MainButton } from './styles';
+import { ButtonProps } from './types';
 
-// Интерфейс пропсов для Button, наследуем от стандартных ButtonHTMLAttributes
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  danger?: boolean;  // Добавляем свой проп danger
+// interface ButtonProps {
+//   name: string,
+//   //void - если функция ничего не возвращает
+//   onClick?: () => void,
+//   disabled?: boolean,
+//   type?: 'submit' | 'button' | 'reset'
+// }
+
+function Button({ name, onClick, disabled = false, type = 'submit', danger }: ButtonProps) {
+  return (
+    <MainButton
+      onClick={onClick}
+      disabled={disabled}
+      type={type}
+      danger={danger}
+    >
+      {name}
+    </MainButton>
+  )
 }
 
-const StyledButton = styled.button<{ danger?: boolean }>`
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: ${(props) => (props.danger ? "green" : "orange")};
-  color: white;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: ${(props) => (props.danger ? "#006600" : "#ff6600")};
-  }
-`;
-
-const Button: FC<ButtonProps> = ({ children, danger = false, ...rest }) => {
-  return (
-    <StyledButton {...rest} danger={danger}>
-      {children}
-    </StyledButton>
-  );
-};
-
-export default Button;
-
-
-
-
-
-
-
-
-
+export default Button

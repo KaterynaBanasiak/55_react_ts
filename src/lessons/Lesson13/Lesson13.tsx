@@ -53,12 +53,12 @@ function Lesson13() {
         onChange={handleInputChange}
       />
 
-      <Button onClick={fetchImage} disabled={isLoading}>
+      <button onClick={fetchImage} disabled={isLoading}>
         GET MORE IMAGES
-      </Button>
+      </button>
 
       {images.length > 0 && (
-        <Button onClick={deleteAllImages}>DELETE ALL DATA</Button>
+        <button onClick={deleteAllImages}>DELETE ALL DATA</button>
       )}
 
       {error && <ErrorMessage>{error}</ErrorMessage>}
