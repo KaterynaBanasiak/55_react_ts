@@ -1,22 +1,19 @@
-import { CourseWrapper, Title, List, ListItem } from "./styles.ts";
+import { v4 } from "uuid"
 
-function Course() {
+import { CourseWrapper, Title, ListItem } from "./styles"
+import { lessonsData } from "./data.ts"
+
+function Course (){
+const lessons = lessonsData.map((lesson: string)=>{
+  return <ListItem key={v4()}>{lesson}</ListItem>
+})
+
   return (
     <CourseWrapper>
       <Title>React Lessons</Title>
-      <List>
-        <ListItem>JSX и компоненты</ListItem>
-        <ListItem>Props и State</ListItem>
-        <ListItem>Обработка событий</ListItem>
-        <ListItem>Роутинг с React Router</ListItem>
-        <ListItem>Стилизация (Emotion)</ListItem>
-        <ListItem>Формы и Formik</ListItem>
-        <ListItem>Валидация с Yup</ListItem>
-        <ListItem>Работа с API</ListItem>
-        <ListItem>useEffect и useState</ListItem>
-      </List>
+      {lessons}
     </CourseWrapper>
-  );
+  )
 }
 
-export default Course;
+export default Course
