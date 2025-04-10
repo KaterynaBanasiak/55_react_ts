@@ -14,3 +14,4 @@ export const SectionTitle = styled.div`
   font-size: 24px;
   color: #5E6969;
 `
+

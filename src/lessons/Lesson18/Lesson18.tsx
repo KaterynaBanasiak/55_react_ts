@@ -1,12 +1,12 @@
 import MainCard from "./components/MainCard/MainCard"
-import { Lesson14Wrapper } from "./styles"
+import { Lesson18Wrapper } from "./styles"
 
-function Lesson14() {
+function Lesson18() {
   return (
-    <Lesson14Wrapper>
+    <Lesson18Wrapper>
       <MainCard />
-    </Lesson14Wrapper>
+    </Lesson18Wrapper>
   )
 }
 
-export default Lesson14
+export default Lesson18
