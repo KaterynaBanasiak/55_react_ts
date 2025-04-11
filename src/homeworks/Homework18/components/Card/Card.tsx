@@ -1,12 +1,21 @@
-import Message from "../Message/Message"
+import Message from '../Message/Message';
+import styled from '@emotion/styled';
+
+const CardContainer = styled.div`
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 12px;
+`;
 
 function Card() {
   return (
-    <div style={{ marginTop: "20px", border: "1px solid black", padding: "10px" }}>
-      <div><strong>Ivan Ivanov</strong></div>
+    <CardContainer>
+      <h2>Anna Petrova</h2>
       <Message />
-    </div>
-  )
+    </CardContainer>
+  );
 }
 
-export default Card
+export default Card;
+

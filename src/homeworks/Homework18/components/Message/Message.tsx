@@ -1,17 +1,29 @@
-import { useContext } from "react"
-import { BlogContext } from "../../context"
+import { useContext } from 'react';
+import { BlogContext } from '../../components/BlogContext';
+import Button from "../../../../components/Button/button";
+import styled from '@emotion/styled';
+
+const MessageText = styled.p`
+  margin: 10px 0;
+  font-size: 16px;
+`;
 
 function Message() {
-  const { post, setPost } = useContext(BlogContext)
+  const { postMessage, setPostMessage } = useContext(BlogContext);
 
-  if (!post) return null
+  const handleDelete = () => {
+    setPostMessage('');
+  };
+
+  if (!postMessage) return null;
 
   return (
-    <div style={{ marginTop: "10px" }}>
-      <div>{post}</div>
-      <button onClick={() => setPost("")}>Delete Post</button>
-    </div>
-  )
+    <>
+      <MessageText>{postMessage}</MessageText>
+      <Button name="Delete Post" onClick={handleDelete} danger />
+    </>
+  );
 }
 
-export default Message
+export default Message;
+

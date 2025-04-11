@@ -1,15 +1,9 @@
-import { useState } from "react"
-import BlogManagement from "./components/BlogManagement/BlogManagement"
-import { BlogContext } from "./context"
+import BlogManagement from './components/BlogManagement/BlogManagement';
 
 function Homework18() {
-  const [post, setPost] = useState('')
-
-  return (
-    <BlogContext.Provider value={{ post, setPost }}>
-      <BlogManagement />
-    </BlogContext.Provider>
-  )
+  return <BlogManagement />;
 }
 
-export default Homework18
+export default Homework18;
+
+
